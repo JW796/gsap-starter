@@ -4,13 +4,19 @@ import gsap from "gsap";
 const GsapFromTo = () => {
   // TODO: Implement the gsap.fromTo() method
   useGSAP(() => {
-    gsap.from("#green-box", {
+    gsap.fromTo("#red-box", {
+      x: 0,
+      rotation: 0,
+      borderRadius: '0%'
+    
+    }, { 
       x: 250,
       repeat: -1,
       yoyo: true,
+      borderRadius: '100%',
       rotation: 360,
       duratipn: 2,
-      ease: "power1.inOut",
+      ease: "bounce.out",
     });
   }, []);
 
